@@ -4,7 +4,9 @@
 All Together began as a project submission for [SelfieHacks](https://selfiehacks.devpost.com).
 
 ##Attributions
-<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-<div>Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+Icons made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com)
+
+Icons made by [Roundicons](https://www.flaticon.com/authors/roundicons) from [Flaticon](https://www.flaticon.com)
+
 
 Icons made by [Twitter Emoji (Twemoji)](https://github.com/twitter/twemoji)
