@@ -1,0 +1,205 @@
+<style>
+  .campaignmode-hackathon {
+    border-radius: 9px;
+    background: white;
+    color: #0D122B;
+    margin: 20px auto;
+    max-width: 1440px;
+    width: 96%;
+    font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+      Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    padding: 30px 0;
+    position: relative;
+    border: 2px solid #dfe3e6;
+    box-shadow: 2px 2px 2px #dfe3e6;
+    overflow: hidden;
+  }
+  .campaignmode-hackathon--first {
+    width: 55%;
+    display: inline-block;
+    margin-left: 5%;
+  }
+  .campaignmode-hackathon--second {
+    width: 35%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: bottom;
+    margin-left: 2%;
+  }
+  .campaignmode-hackathon img.campaignmode-hackathon--mainimage {
+    width: 380px;
+    height: 156px;
+    max-width: 90%;
+    margin-top: 25px;
+    margin-left: -25px;
+  }
+  .campaignmode-hackathon--clipart {
+    width: 100%;
+  }
+  .campaignmode-hackathon h1 {
+    margin: -5px auto 3px;
+    font-size: 50px;
+    font-weight: 900;
+  }
+  .campaignmode-hackathon--second h1 {
+    display: inline-block;
+    margin: 0 50px;
+    vertical-align: 75px;
+  }
+  .campaignmode-hackathon h2 {
+    margin: 20px auto 20px;
+  }
+  .campaignmode-hackathon h3 {
+    margin: 10px 0px 1px;
+    font-size: 32px;
+    max-width: 90%;
+    font-weight: 500;
+  }
+  .campaignmode-hackathon a {
+    background: rgb(158, 27, 27);
+    color: #f9f9f9;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 3px;
+    font-size: 34px;
+    display: inline-block;
+    max-width: 80%;
+  }
+  .campaignmode-hackathon button {
+    background: rgb(158, 27, 27);
+    color: #f9f9f9;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 3px;
+    font-size: 34px;
+    display: inline-block;
+    max-width: 80%;
+    height: 35%;
+  }
+
+  .campaignmode-hackathon .closebutton {
+    position: absolute;
+    right: 18px;
+    top: 0px;
+    color: #0D122B;
+    background: transparent;
+    border: 0px;
+    font-size: 45px;
+    cursor: pointer;
+    text-align: right;
+    padding: 0px;
+  }
+  @media screen and (max-width: 1280px) {
+      .campaignmode-hackathon--first {
+          width: 60%;
+      }
+
+      .campaignmode-hackathon--second {
+          width: 45%;
+          margin-left: -15%;
+      }
+
+      @media screen and (max-width: 1080px) {
+          .campaignmode-hackathon--first {
+              width: 65%;
+          }
+
+          .campaignmode-hackathon--second {
+              width: 40%;
+          }
+
+          .campaignmode-hackathon a {
+              font-size: 25px;
+          }
+
+          .campaignmode-hackathon h1 {
+              font-size: 45px;
+          }
+
+          .campaignmode-hackathon h3 {
+              font-size: 20px;
+          }
+          .campaignmode-hackathon button {
+            font-size: 25px;
+          }
+      }
+      @media screen and (max-width: 800px) {
+          .campaignmode-hackathon {
+              border-radius: 0px;
+              margin: 0px;
+              width: 100%;
+              font-size: 0.9em;
+          }
+
+          .campaignmode-hackathon--first {
+              width: 85%;
+              margin-left: 5%;
+          }
+
+          .campaignmode-hackathon--second {
+              display: none;
+          }
+
+          .campaignmode-hackathon a {
+              font-size: 25px;
+          }
+
+          .campaignmode-hackathon button {
+              font-size: 25px;
+          }
+
+          .campaignmode-hackathon h1 {
+              font-size: 45px;
+          }
+
+          .campaignmode-hackathon h3 {
+              font-size: 20px;
+          }
+      }
+  }
+</style>
+<div class="campaignmode-hackathon">
+  <div class="campaignmode-hackathon--second">
+    <img class="campaignmode-hackathon--clipart" src="https://raw.githubusercontent.com/hua-lun/maker/main/img/All-Together.gif">
+  </div>
+  <div class="campaignmode-hackathon--first">
+    <h1>Want some inspiration? Try our prompt generator!
+    </h1>
+    <div id="duration">
+      <h3>Duration</h3>
+    </div>
+    <div id="device">
+      <h3>Device</h3>
+    </div>
+    <div id="genre">
+      <h3>Genre</h3>
+    </div>
+    <button  id="inspo">Get prompts!</button>
+  </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>
+
+
+  function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+  }
+
+  $('#inspo').click(function () {
+    var time = getRandomIntInclusive(1, 20);
+
+    const deviceArr = ["Computer without using any cameras", "Camera", "Phone Camera", "Webcam"];
+    var device = deviceArr[getRandomIntInclusive(0, 3)];
+
+    const genreArr = ["Crafts", "Gaming", "Vlog", "Documentary", "Fashion", "Cooking", "Music", "Review", "Animation", "Technology"];
+    var genre = genreArr[getRandomIntInclusive(0, 9)];
+
+    $('#duration').html('<h3>' + "Duration: " + time + "minutes" + '</h3>');
+    $('#device').html('<h3>' + "Device: " + device + '</h3>');
+    $('#genre').html('<h3>' + "Genre: " + genre + '</h3>');
+  })
+
+</script>
