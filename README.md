@@ -1,4 +1,4 @@
-# [All Together](www.all-together.tech)
+# [All Together](https://www.all-together.tech)
 
 ## Inspiration
 As someone that likes to watch cooking competitions and participate in Hackathons, I wanted to combine the two and bring it
